@@ -1,0 +1,29 @@
+﻿@model  studentManagement.viewModels.HomeIndexViewModels
+@{
+    Layout="~/views/Shared/_Layout.cshtml";
+    ViewBag.Title = Model.title;
+}
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>姓名</th>
+                <th>年纪</th>
+                <th>Email</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            @foreach (var student in Model.stuList)
+            {
+            <tr>
+                <td>@student.id</td>
+                <td>@student.name</td>
+                <td>@student.className</td>
+                <td>@student.email</td>
+            </tr>
+            }
+        </tbody>
+       
+    </table>
+

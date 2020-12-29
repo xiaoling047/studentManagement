@@ -5,4 +5,29 @@
 	  <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="新文件夹1\**" />
+    <Compile Remove="新文件夹2\**" />
+    <Compile Remove="新文件夹\**" />
+    <Content Remove="新文件夹1\**" />
+    <Content Remove="新文件夹2\**" />
+    <Content Remove="新文件夹\**" />
+    <EmbeddedResource Remove="新文件夹1\**" />
+    <EmbeddedResource Remove="新文件夹2\**" />
+    <EmbeddedResource Remove="新文件夹\**" />
+    <None Remove="新文件夹1\**" />
+    <None Remove="新文件夹2\**" />
+    <None Remove="新文件夹\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\js\" />
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StudentManagment.DAL\StudentManagment.DAL.csproj" />
+  </ItemGroup>
+
 </Project>
